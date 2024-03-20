@@ -42,9 +42,9 @@ A API não requer autenticação para operações básicas de CRUD. No entanto, 
 
 A API aceita requisições e responde em formato JSON.
 
-## Testando a Aplicação
+## Documentação
 
-Você pode testar uma Demo do projeto entrando no seguinte link: https://www.postman.com/lumx-studios/workspace/tunde-todo-list/collection/25475684-3625e9e0-92d1-418c-be8b-2479f4640431
+Você acessar a documentação e testar uma Demo do projeto entrando no seguinte link: https://www.postman.com/lumx-studios/workspace/tunde-todo-list/collection/25475684-3625e9e0-92d1-418c-be8b-2479f4640431
 
 ## Executando a Aplicação
 
