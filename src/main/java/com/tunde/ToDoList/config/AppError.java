@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class AppError {
     @ExceptionHandler(Exception.class)
     public ResponseEntity generalException(Exception exception) {
-        ExceptionDTO exceptionDTO = new ExceptionDTO(exception.getMessage(), "500");
+        ExceptionDTO exceptionDTO = new ExceptionDTO(exception.getMessage(), "400");
         return ResponseEntity.badRequest().body(exceptionDTO);
     }
 }

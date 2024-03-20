@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/task")
+@RequestMapping("/tasks")
 public class TaskController {
 
     @Autowired
@@ -38,7 +38,7 @@ public class TaskController {
     }
 
 
-    @PutMapping("/complete/{id}")
+    @PutMapping("/{id}/complete")
     public ResponseEntity<String> markTaskAsCompleted(@PathVariable UUID id) throws Exception {
         this.taskService.completeTask(id);
         return ResponseEntity.status(HttpStatus.OK).body("Done!");

@@ -1,7 +1,6 @@
 package com.tunde.ToDoList.domain.entity;
 
 import com.tunde.ToDoList.domain.dto.CreateTaskDto;
-import com.tunde.ToDoList.domain.dto.UpdateTaskDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
