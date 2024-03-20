@@ -44,7 +44,7 @@ A API aceita requisições e responde em formato JSON.
 
 ## Documentação
 
-Você acessar a documentação e testar uma Demo do projeto entrando no seguinte link: https://www.postman.com/lumx-studios/workspace/tunde-todo-list/collection/25475684-3625e9e0-92d1-418c-be8b-2479f4640431
+Você acessar a documentação e testar uma Demo do projeto entrando no seguinte link: https://www.postman.com/satellite-cosmonaut-45714427/workspace/tund-s-projects/documentation/31016125-2febfab8-1d76-4919-b445-b2b8d2a44bda
 
 ## Executando a Aplicação
 
