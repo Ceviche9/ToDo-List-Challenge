@@ -1,4 +1,4 @@
-## Descrição do Projeto
+# Descrição do Projeto
 
 Este projeto é uma API RESTful para gerenciar uma lista de tarefas (ToDo list). Ele permite a criação, leitura, atualização e exclusão de tarefas, bem como a marcação de tarefas como concluídas.
 
@@ -41,3 +41,14 @@ A API não requer autenticação para operações básicas de CRUD. No entanto, 
 ## Formato de Requisição e Resposta
 
 A API aceita requisições e responde em formato JSON.
+
+## Executando a Aplicação
+
+Para executar a aplicação, siga os passos abaixo:
+
+1. Certifique-se de ter o JDK (Java Development Kit) instalado em sua máquina. Você pode baixar e instalar o JDK mais recente no site oficial da Oracle ou de um provedor confiável.
+2. Certifique-se de ter o Gradle instalado em sua máquina. O Gradle é uma ferramenta de automação de compilação e gerenciamento de dependências. Você pode baixar e instalar o Gradle no site oficial do Gradle.
+3. Clone o repositório do projeto do GitHub em sua máquina local: git clone https://github.com/Ceviche9/ToDo-List-Challenge.git
+4. Navegue até o diretório raiz do projeto: cd ToDo-List-Challenge
+5. Compile e execute o projeto usando o Gradle: gradle bootRun
+6. Agora você pode acessar a API através do seguinte URL: http://localhost:8080
