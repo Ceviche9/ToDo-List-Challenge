@@ -30,13 +30,9 @@ A entidade `Task` possui os seguintes campos:
 - `title` (String): Título da tarefa.
 - `description` (String): Descrição da tarefa.
 - `dueDate` (Date): Data de vencimento da tarefa.
-- `priority` (String): Prioridade da tarefa (Alta, Média, Baixa).
+- `priority` (String): Prioridade da tarefa (High, Medium, Low).
 - `completed` (Boolean): Indica se a tarefa foi concluída.
-- `completedAt` (Date): Data e hora em que a tarefa foi concluída.
-
-## Autenticação
-
-A API não requer autenticação para operações básicas de CRUD. No entanto, algumas operações podem exigir autenticação, dependendo dos requisitos de segurança do sistema.
+- `completedAt` (Date): Data em que a tarefa foi concluída.
 
 ## Formato de Requisição e Resposta
 
