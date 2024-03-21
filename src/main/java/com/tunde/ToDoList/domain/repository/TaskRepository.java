@@ -14,5 +14,5 @@ public interface TaskRepository extends JpaRepository<Task, UUID> {
     @Transactional
     @Modifying
     @Query("UPDATE Task t SET t.completed = true, t.completedAt = CURRENT_DATE WHERE t.id = :taskId")
-    Task markTaskAsCompleted(UUID taskId);
+    void markTaskAsCompleted(UUID taskId);
 }

@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.data.domain.Sort;
@@ -23,7 +22,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
@@ -110,7 +108,7 @@ class TaskServiceTest {
         CreateTaskDto createTaskDto = this.generateRandomTask("Title-test");
         Task task = new Task(createTaskDto);
         when(taskRepository.findById(taskId)).thenReturn(Optional.of(task));
-        when(taskRepository.markTaskAsCompleted(taskId)).thenReturn(task);
+        when(taskRepository.save(task)).thenReturn(task);
 
         taskService.completeTask(taskId);
         task.setCompleted(true);

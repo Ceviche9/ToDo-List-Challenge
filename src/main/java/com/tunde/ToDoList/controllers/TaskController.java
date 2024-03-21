@@ -41,7 +41,7 @@ public class TaskController {
     @PutMapping("/{id}/complete")
     public ResponseEntity<String> markTaskAsCompleted(@PathVariable UUID id) throws Exception {
         this.taskService.completeTask(id);
-        return ResponseEntity.status(HttpStatus.OK).body("Done!");
+        return ResponseEntity.status(HttpStatus.OK).body("Task completed!");
     }
 
     @PutMapping("/{id}")
