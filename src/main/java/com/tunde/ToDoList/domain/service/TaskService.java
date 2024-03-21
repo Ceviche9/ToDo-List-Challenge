@@ -23,7 +23,6 @@ public class TaskService {
 
     public Task createTask(CreateTaskDto dto) throws Exception {
         var task = new Task(dto);
-        if (dto.title().isEmpty()) throw new BadRequestException("The task title can not be empty");
         return this.taskRepository.save(task);
     }
 
@@ -59,6 +58,8 @@ public class TaskService {
         if (optionalTask.isEmpty()) throw new Exception("Task not found!");
 
         Task task = optionalTask.get();
+        // Verificar se precisa modificar o banco de dados.
+        if (!this.taskHasFieldsToUpdate(task, dto)) return task;
 
         if (dto.title() != null && !dto.title().isEmpty()) {
             task.setTitle(dto.title());
@@ -73,5 +74,16 @@ public class TaskService {
         }
 
         return this.taskRepository.save(task);
+    }
+
+    private boolean taskHasFieldsToUpdate(Task task, UpdateTaskDto newTask){
+        // Verificar se os campos enviados para atualizar são diferentes dos campos que estão no banco.
+        if ((newTask.description() != null && !newTask.description().equals(task.getDescription())) ||
+                (newTask.title() != null && !newTask.title().equals(task.getTitle())) ||
+                (newTask.dueDate() != null && !newTask.dueDate().equals(task.getDueDate()))) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
