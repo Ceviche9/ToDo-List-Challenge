@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -42,6 +44,7 @@ public class TaskService {
         Task task = optionalTask.get();
         if (task.getCompleted()) throw new Exception("This task is already completed");
         task.setCompleted(true);
+        task.setCompletedAt(Date.valueOf(LocalDate.now()));
         this.taskRepository.save(task);
     }
 
