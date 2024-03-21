@@ -42,6 +42,10 @@ A API não requer autenticação para operações básicas de CRUD. No entanto, 
 
 A API aceita requisições e responde em formato JSON.
 
+## Documentação
+
+Você acessar a documentação e testar uma Demo do projeto entrando no seguinte link: https://www.postman.com/satellite-cosmonaut-45714427/workspace/tund-s-projects/documentation/31016125-2febfab8-1d76-4919-b445-b2b8d2a44bda
+
 ## Executando a Aplicação
 
 Para executar a aplicação, siga os passos abaixo:
