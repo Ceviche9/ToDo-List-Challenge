@@ -36,11 +36,11 @@ public class TaskService {
         return task.get();
     }
 
-    public void completeTask(UUID id) throws Exception {
+    public Task completeTask(UUID id) throws Exception {
         Optional<Task> task = this.taskRepository.findById(id);
         if (task.isEmpty()) throw new Exception("Task not found!");
         if (task.get().getCompleted()) throw new Exception("This task is already completed");
-        this.taskRepository.markTaskAsCompleted(task.get().getId());
+        return this.taskRepository.markTaskAsCompleted(task.get().getId());
     }
 
     public void deleteTask(UUID id) throws Exception {
