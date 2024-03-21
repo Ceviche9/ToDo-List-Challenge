@@ -50,9 +50,25 @@ Você acessar a documentação e testar uma Demo do projeto entrando no seguinte
 
 Para executar a aplicação, siga os passos abaixo:
 
-1. Certifique-se de ter o JDK (Java Development Kit) instalado em sua máquina. Você pode baixar e instalar o JDK mais recente no site oficial da Oracle ou de um provedor confiável.
-2. Certifique-se de ter o Gradle instalado em sua máquina. O Gradle é uma ferramenta de automação de compilação e gerenciamento de dependências. Você pode baixar e instalar o Gradle no site oficial do Gradle.
-3. Clone o repositório do projeto do GitHub em sua máquina local: git clone https://github.com/Ceviche9/ToDo-List-Challenge.git
-4. Navegue até o diretório raiz do projeto: cd ToDo-List-Challenge
-5. Compile e execute o projeto usando o Gradle: gradle bootRun
-6. Agora você pode acessar a API através do seguinte URL: http://localhost:8080
+1.  Certifique-se de ter o JDK (Java Development Kit) instalado em sua máquina. Você pode baixar e instalar o JDK mais recente no site oficial da Oracle ou de um provedor confiável.
+    
+2.  Certifique-se de ter o Gradle instalado em sua máquina. O Gradle é uma ferramenta de automação de compilação e gerenciamento de dependências. Você pode baixar e instalar o Gradle no site oficial do Gradle.
+    
+3.  Certifique-se de ter um banco de dados PostgreSQL rodando localmente ou hospedado em algum lugar. Você pode instalar o PostgreSQL em sua máquina local ou utilizar um serviço de hospedagem de banco de dados.
+    
+4.  Clone o repositório do projeto do GitHub em sua máquina local: git clone [https://github.com/Ceviche9/ToDo-List-Challenge.git](https://github.com/Ceviche9/ToDo-List-Challenge.git)
+    
+5.  Navegue até o diretório raiz do projeto: cd ToDo-List-Challenge
+    
+6.  Configure as informações de conexão com o banco de dados PostgreSQL no arquivo `application.properties`.
+
+7. Adicione as informações do banco de dados às variáveis de ambiente da sua IDE: -  `DATABASE_URL`: URL de conexão com o banco de dados PostgreSQL. -  `USERNAME`: Nome de usuário do banco de dados PostgreSQL. -  `PASSWORD`: Senha do banco de dados PostgreSQL.
+    
+8.  Compile e execute o projeto usando o Gradle: gradle bootRun
+
+9. Rode os testes utilizando: gradle test
+    
+10.  Agora você pode acessar a API através do seguinte URL: [http://localhost:8080](http://localhost:8080/)
+    
+
+Certifique-se de configurar corretamente as informações de conexão com o banco de dados PostgreSQL antes de iniciar a aplicação.
